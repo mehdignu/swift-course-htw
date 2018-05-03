@@ -41,7 +41,7 @@ func fridgeContains(_ food: String) -> Bool {
     return fridgeContent.contains(food)
 }
 
-fridgeContent("Eier")
+fridgeContains("Eier")
 print("offen \(fridgeIsOpen)")
 
 //MARK - nested function
@@ -66,4 +66,34 @@ func returnFifteen(startValue: Int) -> Int {
 
 returnFifteen(startValue: 23)
 
+
+
+//MARK - function as parameters
+
+typealias funcType = (Int, Int) -> Int
+
+func addTwoInts(a: Int, b : Int) -> Int{
+    return a + b
+}
+
+func multiTwoInt(a: Int, b:Int) -> Int {
+    return a * b
+}
+
+func isGreater(a: Int, b : Int) -> Bool {
+    return a > b
+}
+
+var mathFunction = addTwoInts
+
+mathFunction(2, 3)
+
+func printMathFunction(mathFunc: funcType, a: Int, b: Int){
+    let result = mathFunc(a,b)
+    print(result)
+}
+
+printMathFunction(mathFunc: addTwoInts, a: 1, b: 2)
+
+//you can also return array with functions and return functions
 
