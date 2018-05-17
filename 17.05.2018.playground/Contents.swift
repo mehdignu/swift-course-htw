@@ -93,4 +93,15 @@ var rückwerts = vorwärts.reversed() // reversedCollection is a lazy map
 rückwerts = String(rückwerts).reversed()
 print(String(rückwerts))
 
+//auto closure
+numbers.count
+
+let removedNUmer = { numbers.remove(at: 2) }
+
+numbers.count
+
+print("welche zahl wurde entfernt "\(removedNUmer())")
+
+numbers.count
+
 
