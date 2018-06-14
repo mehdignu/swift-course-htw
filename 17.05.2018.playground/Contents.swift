@@ -76,7 +76,7 @@ print(formatter.srting(from: 16))
 
 //calculate time of execution - with lazy it would be faster
 let start = CFAbsoluteTimeGetCurrent()
-let array= Array(1..250)
+let array = Array(1..250)
 
 let factor = Array.lazy.map() { item in
     (1...item).filter() {
@@ -100,7 +100,6 @@ let removedNUmer = { numbers.remove(at: 2) }
 
 numbers.count
 
-print("welche zahl wurde entfernt "\(removedNUmer())")
 
 numbers.count
 
